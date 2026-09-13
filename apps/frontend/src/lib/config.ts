@@ -1,2 +1,2 @@
 export const BACKEND_URL =
-  "https://ai-interviewer-backend-nnjc.onrender.com";
+  "https://ai-interviewer-kx9m.onrender.com";
