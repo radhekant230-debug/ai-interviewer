@@ -305,16 +305,10 @@ app.get("/api/v1/result/:interviewId", async (req, res) => {
             })),
             status: interview.status,
         });
-    } catch (error) {
-        console.error("Result error:", error);
+  } catch (error: any) {
+    console.error("PRE-INTERVIEW ERROR:", error);
 
-        res.status(500).json({
-            message: "Failed to get result",
-        });
-    }
-});
-const PORT = process.env.PORT || 3001;
-
-app.listen(PORT, () => {
-    console.log(`Backend running on port ${PORT}`);
-});
+    res.status(500).json({
+        message: error?.message || "Failed to create interview",
+    });
+}
