@@ -1,2 +1,2 @@
 export const BACKEND_URL =
-  import.meta.env.VITE_BACKEND_URL || "http://localhost:3001";
+  "https://ai-interviewer-backend-nnjc.onrender.com";
